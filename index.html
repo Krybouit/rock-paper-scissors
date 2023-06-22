@@ -10,20 +10,27 @@
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
-    <h2>Pick one!</h2>
-    <div class="buttons">
-        <button id="rockBtn">Rock</button>
-        <button id="paperBtn">Paper</button>
-        <button id="scissorsBtn">Scissors</button>
-    </div>
+    <h2>First to get 5 points wins!</h2>
     <div id="gameWinner"></div>
     <div id="roundResult"></div>
+    <div class="buttons">
+        <button id="rockBtn">
+            <img src="images/rock.jpg">
+        </button>
+        <button id="paperBtn">
+            <img src="images/paper.jpg">
+        </button>
+        <button id="scissorsBtn">
+            <img src="images/scissors.jpg">
+        </button>
+    </div>
     <div class="score-container">
         <div id="playerScore" data-score="0">player: 0</div>
         <div id="computerScore" data-score="0">computer: 0</div>
     </div>
-    <button id="reset">Reset</button>
-    
+    <div id="reset">
+        <button>Reset</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

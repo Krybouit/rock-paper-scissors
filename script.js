@@ -79,11 +79,11 @@ function playRound(playerSelection, computerSelection) {
 
 function scoreMessage(roundWinner, playerSelection, computerSelection) {
   if (roundWinner === "player") {
-    roundResult.textContent = "You Win! " + (playerSelection) + " beats " + (computerSelection);
+    roundResult.innerHTML = "You Win!" + "<br>" + (playerSelection) + " beats " + (computerSelection);
   } else if (roundWinner === "computer") {
-    roundResult.textContent = "You Lose! " + (computerSelection) + " beats " + (playerSelection);
+    roundResult.innerHTML = "You Lose! " + "<br>" + (computerSelection) + " beats " + (playerSelection);
   } else if (roundWinner === "tie") {
-    roundResult.textContent = "Its a Tie! " + (computerSelection) + " and " + (playerSelection);
+    roundResult.innerHTML = "Its a Tie!" + "<br>" + (computerSelection) + " and " + (playerSelection);
   }
 }
 
@@ -94,7 +94,7 @@ function game() {
       document.getElementById("paperBtn").disabled = true;
       document.getElementById("scissorsBtn").disabled = true;
     } else if (computerScore.dataset.score === "5") {
-      gameWinner.textContent = "you lost the game!";
+      gameWinner.textContent = "You lost the game!";
       document.getElementById("rockBtn").disabled = true;
       document.getElementById("paperBtn").disabled = true;
       document.getElementById("scissorsBtn").disabled = true;
@@ -108,6 +108,8 @@ reset.addEventListener("click", function() {
   computerScore.textContent = "computer: " + computerScore.dataset.score;
   pScore = 0;
   cScore = 0;
+  roundResult.textContent = ""
+  gameWinner.textContent = ""
   document.getElementById("rockBtn").disabled = false;
   document.getElementById("paperBtn").disabled = false;
   document.getElementById("scissorsBtn").disabled = false;
